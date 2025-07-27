@@ -1,9 +1,3 @@
 {
-  "recommendations": [
-    "esbenp.prettier-vscode",
-    "streetsidesoftware.code-spell-checker",
-    "thinker.sort-json",
-    "usernamehw.errorlens",
-    "rust-lang.rust-analyzer"
-  ]
+  "recommendations": []
 }
