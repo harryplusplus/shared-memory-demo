@@ -8,13 +8,16 @@ RUN apt update && \
     apt install -y \
     curl \
     git \
+    build-essential \
+    gdb \
+    cmake \
     # To open in a browser on the host
     xdg-utils \
     && apt clean && \
     rm -rf /var/lib/apt/lists/*
 
 USER vscode
-ENV HOME="/home/vscode"
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.88.0
 RUN echo 'alias ll="ls -a -p -lh"' >> ~/.bashrc
 
 WORKDIR /work
