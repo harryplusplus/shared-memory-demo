@@ -1,0 +1,7 @@
+{
+  "dockerComposeFile": "./compose.yaml",
+  "overrideCommand": true,
+  "postCreateCommand": ".devcontainer/post_create.sh",
+  "service": "work",
+  "workspaceFolder": "/work"
+}

@@ -1,0 +1,9 @@
+services:
+  work:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ../:/work
+    network_mode: host
+    restart: 'no'
