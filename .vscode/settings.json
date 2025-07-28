@@ -15,5 +15,6 @@
     "editor.defaultFormatter": "tamasfe.even-better-toml",
     "editor.formatOnSave": true
   },
-  "files.associations": {}
+  "files.associations": {},
+  "rust-analyzer.imports.granularity.group": "item"
 }
