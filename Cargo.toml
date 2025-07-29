@@ -4,17 +4,23 @@ version = "0.1.0"
 edition = "2024"
 
 [lib]
-name = "core"
+name = "common"
 path = "src/lib.rs"
 
 [[bin]]
-name = "game_server"
-path = "src/bin/game_server.rs"
+name = "server"
+path = "src/bin/server.rs"
 
 [[bin]]
-name = "game_monitor"
-path = "src/bin/game_monitor.rs"
+name = "monitor"
+path = "src/bin/monitor.rs"
 
 [dependencies]
 anyhow = "1.0.98"
 nix = { version = "0.30.1", features = ["mman", "fs"] }
+tokio = { version = "1.47.0", features = [
+    "rt-multi-thread",
+    "macros",
+    "signal",
+    "time",
+] }
